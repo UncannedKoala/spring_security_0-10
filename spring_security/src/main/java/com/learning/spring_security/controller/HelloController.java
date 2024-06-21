@@ -16,7 +16,7 @@ public class HelloController {
 	 * <strong>url:</strong> {@code curl -u user:<i>password</i>
 	 * http://localhost:8080/hello } <br>
 	 * OR <br>
-	 * <strong> url:</strong> {@code curl -H "Authorization: Basic
+	 * <strong>url:</strong> {@code curl -H "Authorization: Basic
 	 * dXNlcjoxMWM0YTFiMy01NGRjLTQyNjctODE0Yy1hZjQ3MjRkZjQ3NWI="
 	 * http://localhost:8080/hello} <br>
 	 * <br>
@@ -26,6 +26,14 @@ public class HelloController {
 	 * to "Basic " and then adds it to header as a value for key
 	 * {@code Authorization}. All this happens behind the scene because of using
 	 * {@code -u}<br>
+	 * <hr>
+	 * <li>HTTPS combines HTTP with Transport Layer Security (TLS) or Secure Sockets
+	 * Layer (SSL) to establish an encrypted connection between a browser or app and
+	 * a website.
+	 * <li>Here after enabling the SSL we called this endpoint using</li>
+	 * <strong>url:</strong>
+	 * {@code curl -k -u user:a13a65eb-1629-4e06-8f45-a564bd84ea56 https://localhost:8080/hello}<br>
+	 * <br>
 	 * 
 	 * @apiNote Use {@code https://www.base64encode.net/} to encode and decode
 	 * 
