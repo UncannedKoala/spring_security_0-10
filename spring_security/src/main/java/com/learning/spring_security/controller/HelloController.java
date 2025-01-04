@@ -35,6 +35,12 @@ public class HelloController {
 	 * {@code curl -k -u user:a13a65eb-1629-4e06-8f45-a564bd84ea56 https://localhost:8080/hello}<br>
 	 * <br>
 	 * 
+	 * 
+	 * <strong>At this stage only <i>curl -k -u admin:password
+	 * https://localhost:8080/hello</i> will be able to get the response and all
+	 * other calls will fail due to lack of default UserName:Password
+	 * combination</strong>
+	 * <hr>
 	 * @apiNote Use {@code https://www.base64encode.net/} to encode and decode
 	 * 
 	 */

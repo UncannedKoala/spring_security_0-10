@@ -1,0 +1,3 @@
+-Providing a custom UserDetailsService and custom PasswordEncoder will override the default implementations for both of them. 
+Not just that it will also not generate any default passwords since we have given an implementation for UserDetailsService and PasswordEncoder.
+
