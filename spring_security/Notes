@@ -1,3 +1,7 @@
--Providing a custom UserDetailsService and custom PasswordEncoder will override the default implementations for both of them. 
+- Providing a custom UserDetailsService and custom PasswordEncoder will override the default implementations for both of them. 
 Not just that it will also not generate any default passwords since we have given an implementation for UserDetailsService and PasswordEncoder.
 
+- HttpSecurity.authorizeHttpRequests() Provides ability to restrict access based on HTTPServletRequest using RequestMatcher implementation.
+
+- A HttpSecurity Class is similar to Spring Security's XML <http> element in the namespace configuration. It allows configuring web based security for specific http requests. 
+By default it will be applied to all requests, but can be restricted using requestMatcher(RequestMatcher) or other similar methods. 
