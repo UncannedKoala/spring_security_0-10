@@ -40,8 +40,8 @@ public class ApplicationSecurityConfig {
 	}
 
 	/**
-	 * We are using {@code AbstractRequestMatcherRegistry.anyRequest()} to indicate that we
-	 * want to apply this restriction/rule to any of the incoming HTTP requests,
+	 * We are using {@code AbstractRequestMatcherRegistry.permitAll()} to indicate that we
+	 * want to apply this restriction/rule to NONE of the incoming HTTP requests,
 	 * since we have not provided any URLPattern, it will take all the incoming
 	 * HTTPRequests into consideration.
 	 * 
@@ -50,7 +50,7 @@ public class ApplicationSecurityConfig {
 	SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 
 		httpSecurity.httpBasic(Customizer.withDefaults());
-		httpSecurity.authorizeHttpRequests(c -> c.anyRequest().authenticated());
+		httpSecurity.authorizeHttpRequests(c -> c.anyRequest().permitAll());
 
 		return httpSecurity.build();
 	}

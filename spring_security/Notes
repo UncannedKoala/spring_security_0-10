@@ -5,3 +5,10 @@ Not just that it will also not generate any default passwords since we have give
 
 - A HttpSecurity Class is similar to Spring Security's XML <http> element in the namespace configuration. It allows configuring web based security for specific http requests. 
 By default it will be applied to all requests, but can be restricted using requestMatcher(RequestMatcher) or other similar methods. 
+
+- Using AbstractRequestMatcherRegistry.permitAll() will permit the entry of all the matching requests, in this application we have not passed any URL
+Pattern to filter the requests, thus all the incoming requests will be allowed to permit and bypass the Authentication.
+
+- NOTE: AbstractRequestMatcherRegistry.permitAll() will permit all the requests without credentials, with valid credentials but none with invalid credentials.
+CLARIFICATION :: The anyRequest().permitAll() configuration only determines whether requests need to be authenticated to access resources.
+It does not disable authentication mechanisms (like HTTP Basic) or bypass authentication processing for requests with authentication headers.
